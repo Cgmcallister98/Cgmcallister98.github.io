@@ -6,14 +6,13 @@
 
 var ctx = document.getElementById("myCanvas").getContext("2d");
 
-var color;
-var size;
-var bgColor;
+var color = 'black';
+var size = 25;
+var bgColor = 'black';
 var int;
-var recognition = new webkitSpeechRecognition();
-recognition.continious = true;
-recognition.interimResults = true;
-recognition.lang = "en-US";
+var synth = window.speechSynthesis;
+synth.lang = "en-US";
+
 
 ctx.beginPath();
 ctx.fillStyle = 'black';
@@ -22,48 +21,105 @@ ctx.fill();
 ctx.stroke();
 
 var commands = {
-    'color *': function(word){
-        if(word === 'red' || word === 'blue')//add all colors
-            color = word;
+    'color *word': function(word){
+        alert('speech function');
+        colorChange(word);
     },
-    'background *': function(word){
-        if(word === 'red' || word === 'blue')//add all colors
-            bgColor = word;
+    'background *word': function(word){
+        alert('bg function');
+        backgroundChange(word);
     },
-    'size *': function(word){
+    'size *word': function(word){
+        alert('size function');
         size = parseInt(word);
-        if(size < 1)
-            //too small error
-        if(size > 300)
-            ;//too big error
+        sizeChange(size);
     },
     'help': function(){
-        alert('help');
+        help();
     },
     'about': function(){
-        
+        about();
     }
 };
 
 annyang.addCommands(commands);
 
 function startButton(){
-  document.getElementById('speakButton').value = "Stop"; //change back as well
-  annyang.start();
-};
-
-recognition.onresult = function (event) {
-    for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) {
-            //if word equals color/background/size then do size otherwise error msg
-        }
-    }
-};
-
-recognition.onerror = function(event){
-
-};
-
-recognition.onend = function(){ 
+  var x = document.getElementById("speakButton");
+  if (x.value === "Speak") {
+    x.value = "Stop";
+    annyang.start({continuous: false});
+  } else {
+    annyang.abort();  
+    x.value = "Speak";
+  }
+  //annyang.start();
   
-  };
+  
+};
+
+function help(){
+   var msg = new SpeechSynthesisUtterance();
+    msg.text = "Say color, followed by a color, to set the circle color. \n\
+    Say background, followed by a color, to set the background color. \n\
+    Say size, followed of a number from 1 to 300, to set the diameter of the circle. Say about, to hear about the program.";
+    synth.speak(msg);
+};
+
+function about(){
+  var msg = new SpeechSynthesisUtterance();
+  msg.text =  "Created by Cassidy McAllister. This program is to show the usage of text to speech and speech recognition";
+  synth.speak(msg);
+};
+
+function colorChange(word){
+    alert('function called');
+            color = word;
+            clear();
+    
+}
+
+function backgroundChange(word){
+    alert('bg function called');
+            bgColor = word;
+            clear();
+}
+
+function sizeChange(size){
+   
+    if(size < 1){
+            var msg = new SpeechSynthesisUtterance();
+            msg.text =  "Size too small, the minimize size is 1";
+            synth.speak(msg);
+    }
+    if(size > 300){
+            var msg = new SpeechSynthesisUtterance();
+            msg.text =  "Size too big, the size limit is 300";
+            synth.speak(msg);
+    }
+    else{
+        clear();
+    }
+}
+
+function clear(){
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, ctx.width, ctx.height);
+    update();
+}
+
+function update(){
+    alert('update called');
+    
+    ctx.beginPath();
+    ctx.fillStyle = bgColor;
+    ctx.rect(0, 0, ctx.width, ctx.height);
+    ctx.fill();
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.fillstyle = color;
+    ctx.arc(400, 300, size, 0, 2* Math.PI); 
+    ctx.fill();
+    ctx.stroke();
+}

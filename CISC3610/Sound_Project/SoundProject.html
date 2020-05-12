@@ -9,8 +9,16 @@ and open the template in the editor.
         <title>Sound Project</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <canvas id="myCanvas" width="800" height="600"></canvas>
+        <p> INSTRUCTIONS:<br>
+            Press Speak to begin. <br>
+            Say "Color ____" to change the color of the circle. For example "Color Red" to make the circle red.<br>
+            Say "Background ____" to change the background color of the canvas. For example "Background green" to make the background green.<br>
+            Say "Size ____" to change the size of the circle. For example "Size 50" to make the circle with a diameter of 50.<br>
+            Say "Help" to hear these instructions.<br>
+            Say "About" to hear the author and purpose of the program.<br>
+        <p>
         <input type="button" id="speakButton" onclick="startButton()" value="Speak">
+        <canvas id="myCanvas" width="800" height="600"></canvas>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
         <script src="Sound.js"></script>
         
@@ -20,5 +28,6 @@ and open the template in the editor.
             
             
         </div>
+        <a href="../../index.html"> Go Back to Home Page </a>
     </body>
 </html>
