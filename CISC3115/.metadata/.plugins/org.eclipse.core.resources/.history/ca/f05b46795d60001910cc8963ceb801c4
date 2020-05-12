@@ -1,0 +1,271 @@
+
+public class CDAccount extends Account {
+
+	private DateInfo CDdate;
+	
+	public CDAccount() {
+		super();
+		CDdate = new DateInfo();
+	}
+	
+	public CDAccount(int acctNum, String acctType, boolean acctStatus, double acctBalance, Depositor depositor, DateInfo date) {//parameter constructor
+		super();
+		CDdate = date;
+	}
+	
+	public int makeDeposit(double depositAmount, int newDate) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Deposit";
+		if(getStatus() == true) {
+			if(today.compareDate(CDdate) == 0) {
+				trans.setTransType(str);//maturity date not reached
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(1);
+				addTransaction(trans);
+				return -1;
+			}else if(today.compareDate(CDdate) == 1 && depositAmount <= 0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+					// invalid amount to deposit
+				return 0;
+			}else if(today.compareDate(CDdate) == 1 && depositAmount > 0) {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+						
+					CDdate.setMonth(CDdate.getMonth()+6);					
+					setDateInfo(date);
+					setBalance(getBalance() + depositAmount);
+					Bank.addCD(depositAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(depositAmount);
+					addTransaction(trans);
+					
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+						
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() + depositAmount);
+					Bank.addCD(depositAmount);
+						
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(depositAmount);
+					addTransaction(trans);
+					return 1;
+					}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() + depositAmount);
+					Bank.addCD(depositAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(depositAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					setDateInfo(date);
+					setBalance(getBalance() + depositAmount);
+					Bank.addCD(depositAmount);
+						
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(depositAmount);
+					addTransaction(trans);
+					return 1;					
+				}
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+	
+	public int makeWithdrawal(double withdrawAmount, int newDate) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Withdrawal";
+		if(getStatus()==true) {
+			if(today.compareDate(getDateInfo()) == 0) {
+				trans.setTransType(str);//maturity date not reached
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(1);
+				addTransaction(trans);
+				return -1;
+			}else if(today.compareDate(getDateInfo()) == 1 && withdrawAmount <= 0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				// invalid amount to deposit
+				return 0;
+			}else if(today.compareDate(getDateInfo()) == 1 && withdrawAmount > 0.0 && withdrawAmount > getBalance()) {
+				trans.setTransType(str);//insufficient funds
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(3);
+				addTransaction(trans);
+				return -2;
+			}else {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);					
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+	
+	public void setDateInfo(DateInfo date) {
+		CDdate = date;
+	}
+	
+	public DateInfo getDateInfo() {
+		return CDdate;
+	}
+	
+	public Account getAccount() {
+		Account acct = new CDAccount(getAcctNum(), getAcctType(), getStatus(), getBalance(), getDepositor(), getDateInfo());
+		return acct;
+	}
+	
+	public String toString() {
+		String accStatus;
+		String str;
+		if(getStatus() == true)
+			accStatus = "Open";
+		else accStatus = "Closed";
+		 str = String.format("%-12s %-12s %9s %8d %10s %9.2f %8s %4d/%1d/%2d", 
+				getDepositor().getName().getFirst(),
+				getDepositor().getName().getLast(),
+				getDepositor().getSSNumber(),
+				getAcctNum(),
+				getAcctType(), 
+				getBalance(), 
+				accStatus, 
+				CDdate.getMonth(),
+				CDdate.getDayOfMonth(),
+				CDdate.getYear());
+		return str;
+	}
+	
+	public String toStringAcctInfo() {
+		String str;
+		
+		String accStatus;
+		if(getStatus() == true)
+			accStatus = "Open";
+		else accStatus = "Closed";
+		
+		if(getAcctType().equals("CD")){
+			str = String.format("Account Holder: %s %s \n"
+					+ "Account Holder SSID: %s \n "
+					+ "Account Number: %d \n"
+					+ "Account Type: %s \n"
+					+ "Account Balance: %.2f \n"
+					+ "Account Status: %s \n"
+					+ "Maturity Date: %d/%d/%d",
+					getDepositor().getName().getFirst(),
+					getDepositor().getName().getLast(),
+					getDepositor().getSSNumber(),
+					getAcctNum(),
+					getAcctType(), 
+					getBalance(), 
+					accStatus, 
+					CDdate.getMonth(),
+					CDdate.getDayOfMonth(),
+					CDdate.getYear());
+			return str;
+		}
+	
+}
+

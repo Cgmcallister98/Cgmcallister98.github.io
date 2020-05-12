@@ -1,0 +1,2202 @@
+!SESSION 2019-01-28 14:32:04.791 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-01-28 14:54:48.186
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-01-30 15:50:17.606
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2019-01-30 15:52:17.426
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.ui 4 2 2019-02-01 19:00:10.172
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.DefaultBindingResolver.resolveArrayType(DefaultBindingResolver.java:1978)
+	at org.eclipse.jdt.core.dom.TypeBinding.createArrayType(TypeBinding.java:103)
+	at org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.getPossibleReferenceBinding(ASTResolving.java:203)
+	at org.eclipse.jdt.internal.core.manipulation.dom.ASTResolving.guessBindingForReference(ASTResolving.java:105)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarVariableProposals(UnresolvedElementsSubProcessor.java:470)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getVariableProposals(UnresolvedElementsSubProcessor.java:306)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:377)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:332)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:387)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:347)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:342)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:477)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:105)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getCompletionProposals(ProblemHover.java:79)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.deferredCreateContent(AbstractAnnotationHover.java:305)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.setInput(AbstractAnnotationHover.java:192)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1151)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1120)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:884)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:251)
+	at org.eclipse.jface.text.TextViewerHoverManager.lambda$0(TextViewerHoverManager.java:241)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2019-02-06 14:30:12.343 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-06 14:34:36.486
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-06 14:35:16.072
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-06 16:48:19.204 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-06 16:48:37.750
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-10 20:58:50.284 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-10 20:59:10.740
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2019-02-10 20:59:11.897
+!MESSAGE Unable to store working set state.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Fefy6\OneDrive\Documents\CISC 3115\.metadata\.plugins\org.eclipse.ui.workbench\workingsets.xml (The process cannot access the file because it is being used by another process)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.ui.internal.AbstractWorkingSetManager.saveState(AbstractWorkingSetManager.java:805)
+	at org.eclipse.ui.internal.WorkingSetManager.saveState(WorkingSetManager.java:142)
+	at org.eclipse.ui.internal.WorkingSetManager.workingSetChanged(WorkingSetManager.java:165)
+	at org.eclipse.ui.internal.AbstractWorkingSet.fireWorkingSetChanged(AbstractWorkingSet.java:139)
+	at org.eclipse.ui.internal.WorkingSet.setElements(WorkingSet.java:245)
+	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.lambda$0(DynamicSourcesWorkingSetUpdater.java:223)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2019-02-12 14:14:03.027 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-12 14:14:32.164
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-13 09:07:11.371 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-13 09:08:11.576
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-13 15:21:47.928 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-13 15:22:42.264
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-13 18:44:08.771 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-13 18:44:20.442
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-14 11:31:20.028 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-14 11:31:52.482
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-17 10:34:48.943 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-17 10:35:11.022
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-18 12:37:13.480 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-18 12:38:03.690
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-19 09:25:47.284 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-19 09:26:13.698
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-19 18:35:59.284 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-19 18:36:31.125
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-20 13:02:38.279 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-20 13:02:54.114
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-21 08:04:39.676 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-21 08:05:24.494
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-22 10:03:28.929 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-22 10:04:38.479
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-22 14:54:58.619 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-22 14:56:11.705
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-23 11:30:50.301 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-23 11:31:07.047
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-24 18:27:22.497 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-24 18:28:31.935
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-25 09:13:18.351 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-25 09:14:10.437
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-26 09:44:26.279 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-26 09:45:23.996
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-26 13:03:13.969 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-26 13:03:29.907
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-27 09:11:57.502 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-27 09:13:03.430
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-27 13:16:26.112 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-27 13:17:27.934
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-27 13:21:09.626
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-27 13:30:47.475 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-27 13:31:42.692
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-27 13:33:51.870
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-02-27 18:09:10.448 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-27 18:09:23.104
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-27 18:10:00.088
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-05 09:40:10.990 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-05 09:40:35.427
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-06 10:12:01.429 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-06 10:13:10.945
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-08 09:16:46.101 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-08 09:17:53.141
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-13 15:42:59.354 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-13 15:43:57.963
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2019-03-13 15:47:04.429
+!MESSAGE Unable to create part
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2019-03-13 15:47:04.429
+!MESSAGE Cannot determine URI for '/HW4-ArrayList Bank Account/src/HW4_BankAccountwArrayLists.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/HW4-ArrayList Bank Account/src/HW4_BankAccountwArrayLists.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1013)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1277)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4167)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:260)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1476)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2573)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2546)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1423)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3135)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:440)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:356)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$4(WorkbenchWindow.java:2249)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2247)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3152)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3177)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:365)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:345)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1001)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:966)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:411)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:333)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:193)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:108)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:77)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1015)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:781)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:752)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:746)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:730)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1295)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.lambda$0(LazyStackRenderer.java:75)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:177)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1360)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1591)
+	at org.eclipse.ui.internal.WorkbenchPage.hidePart(WorkbenchPage.java:1543)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditors(WorkbenchPage.java:1513)
+	at org.eclipse.ui.internal.WorkbenchPage.closeEditor(WorkbenchPage.java:1637)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$3(AbstractTextEditor.java:4262)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:168)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:324)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:639)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:148)
+	at org.eclipse.ltk.ui.refactoring.resource.DeleteResourcesWizard$DeleteResourcesRefactoringConfigurationPage.performFinish(DeleteResourcesWizard.java:285)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:713)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:450)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:469)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:622)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:822)
+	at org.eclipse.jface.window.Window.open(Window.java:798)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:192)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:212)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:126)
+	at org.eclipse.ltk.internal.ui.refactoring.actions.DeleteResourcesHandler.execute(DeleteResourcesHandler.java:44)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommandInContext(LegacyHandlerService.java:455)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.runCommand(LTKLauncher.java:99)
+	at org.eclipse.ui.internal.ide.actions.LTKLauncher.openDeleteWizard(LTKLauncher.java:51)
+	at org.eclipse.ui.actions.DeleteResourceAction.run(DeleteResourceAction.java:452)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction.run(DeleteAction.java:197)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:476)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:568)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:400)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3944)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3547)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2019-03-13 15:47:04.452
+!MESSAGE Cannot determine URI for '/HW4-ArrayList Bank Account/src/HW4_BankAccountwArrayLists.java'.
+!SESSION 2019-03-13 18:51:51.794 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-13 18:52:43.027
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-17 22:26:33.939 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-17 22:27:40.693
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-19 15:05:58.364 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-19 15:06:47.879
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2019-03-20 01:09:06.575
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4576)
+	at org.eclipse.swt.SWT.error(SWT.java:4510)
+	at org.eclipse.swt.SWT.error(SWT.java:4481)
+	at org.eclipse.swt.graphics.GC.setForeground(GC.java:4365)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.drawBackground(CTabRendering.java:1078)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.drawUnselectedTabBackground(CTabRendering.java:1011)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.drawCustomBackground(CTabRendering.java:993)
+	at org.eclipse.e4.ui.workbench.renderers.swt.CTabRendering.draw(CTabRendering.java:221)
+	at org.eclipse.swt.custom.CTabFolder.updateBkImages(CTabFolder.java:3884)
+	at org.eclipse.swt.custom.CTabFolder.setButtonBounds(CTabFolder.java:2618)
+	at org.eclipse.swt.custom.CTabFolder.updateItems(CTabFolder.java:3794)
+	at org.eclipse.swt.custom.CTabFolder.updateItems(CTabFolder.java:3725)
+	at org.eclipse.swt.custom.CTabFolder.onResize(CTabFolder.java:2117)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:338)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Control.sendResize(Control.java:3066)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:1036)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1086)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3235)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3231)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3307)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3303)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.setRectangle(SashLayout.java:286)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:231)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:274)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:274)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.layout(SashLayout.java:148)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1362)
+	at org.eclipse.swt.widgets.Composite.sendResize(Composite.java:1040)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1086)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3235)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3231)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3226)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:207)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1362)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1764)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5687)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4856)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3274)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1080)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3235)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3231)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3307)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3303)
+	at org.eclipse.swt.custom.StackLayout.layout(StackLayout.java:126)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1362)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1764)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5687)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4856)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3274)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1080)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3235)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3231)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3307)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3303)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.setRectangle(SashLayout.java:286)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:231)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.tileSubNodes(SashLayout.java:274)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashLayout.layout(SashLayout.java:148)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1362)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1764)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5687)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4856)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.SetWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3274)
+	at org.eclipse.swt.widgets.Composite.setBoundsInPixels(Composite.java:1080)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3235)
+	at org.eclipse.swt.widgets.Control.setBoundsInPixels(Control.java:3231)
+	at org.eclipse.swt.widgets.Control.setBounds(Control.java:3226)
+	at org.eclipse.swt.layout.FillLayout.layout(FillLayout.java:207)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1362)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1764)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Scrollable.callWindowProc(Scrollable.java:91)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5687)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4856)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.EndDeferWindowPos(Native Method)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:1010)
+	at org.eclipse.swt.widgets.Composite.resizeChildren(Composite.java:976)
+	at org.eclipse.swt.widgets.Composite.setResizeChildren(Composite.java:1188)
+	at org.eclipse.swt.widgets.Composite.WM_SIZE(Composite.java:1768)
+	at org.eclipse.swt.widgets.Canvas.WM_SIZE(Canvas.java:452)
+	at org.eclipse.swt.widgets.Decorations.WM_SIZE(Decorations.java:1668)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.WM_WINDOWPOSCHANGED(Control.java:5687)
+	at org.eclipse.swt.widgets.Canvas.WM_WINDOWPOSCHANGED(Canvas.java:459)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4856)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4770)
+	at org.eclipse.swt.internal.win32.OS.SetMenu(Native Method)
+	at org.eclipse.swt.widgets.Decorations.setMenuBar(Decorations.java:1059)
+	at org.eclipse.swt.widgets.Menu.releaseParent(Menu.java:943)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:820)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:429)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:958)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:886)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:881)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:865)
+	at org.eclipse.ui.internal.WorkbenchWindow$1.handleEvent(WorkbenchWindow.java:333)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:265)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.lambda$0(SWTPartRenderer.java:139)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:812)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:429)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:408)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:742)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3598)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:300)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3129)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:822)
+	at org.eclipse.jface.window.Window.open(Window.java:798)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:227)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$0(IDEWorkbenchAdvisor.java:164)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4123)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3142)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-20 01:09:06.858
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.ensureCTF(AreaRenderer.java:132)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.synchCTFState(AreaRenderer.java:225)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.access$0(AreaRenderer.java:214)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer$1.handleEvent(AreaRenderer.java:88)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:265)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.lambda$0(SWTPartRenderer.java:139)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1064)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.CTabFolder.onDispose(CTabFolder.java:1653)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:324)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:812)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:174)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:731)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1353)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:429)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:408)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:742)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3598)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:300)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3129)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:822)
+	at org.eclipse.jface.window.Window.open(Window.java:798)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:227)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$0(IDEWorkbenchAdvisor.java:164)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4123)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3142)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-20 01:09:06.881
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.NavigationHistory.getDisplay(NavigationHistory.java:179)
+	at org.eclipse.ui.internal.NavigationHistory.markEditor(NavigationHistory.java:196)
+	at org.eclipse.ui.internal.WorkbenchPage.updateActiveEditorSources(WorkbenchPage.java:433)
+	at org.eclipse.ui.internal.WorkbenchPage.firePartClosed(WorkbenchPage.java:5286)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.lambda$0(CompatibilityPart.java:109)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:265)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.lambda$0(SWTPartRenderer.java:139)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:812)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:174)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:731)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1353)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:429)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:408)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:742)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3598)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:300)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3129)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:822)
+	at org.eclipse.jface.window.Window.open(Window.java:798)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:227)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$0(IDEWorkbenchAdvisor.java:164)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4123)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3142)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.ui 4 0 2019-03-20 01:09:06.899
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.ensureCTF(AreaRenderer.java:132)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.synchCTFState(AreaRenderer.java:225)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer.access$0(AreaRenderer.java:214)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AreaRenderer$1.handleEvent(AreaRenderer.java:88)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:147)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4580)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:265)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:150)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.lambda$0(SWTPartRenderer.java:139)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1064)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.CTabFolder.onDispose(CTabFolder.java:1653)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:324)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:812)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:932)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:174)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:731)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1353)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:815)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:429)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:408)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:742)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3598)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:300)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3129)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:822)
+	at org.eclipse.jface.window.Window.open(Window.java:798)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor.promptOnExit(IDEWorkbenchWindowAdvisor.java:227)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$0(IDEWorkbenchAdvisor.java:164)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4131)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4123)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3142)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1502)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2153)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4778)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3542)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2019-03-20 21:01:13.358 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-20 21:01:47.940
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-20 21:02:30.397
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2019-03-20 21:11:26.929
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at http://download.eclipse.org/releases/2019-03/201903201000/artifacts.xml.xz.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:431)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:135)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.getLocalFile(XZedSimpleArtifactRepositoryFactory.java:65)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:87)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.XZedSimpleArtifactRepositoryFactory.load(XZedSimpleArtifactRepositoryFactory.java:42)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:81)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:770)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:543)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:119)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:114)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:496)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:177)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:99)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:120)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:81)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:770)
+	at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:543)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:119)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:114)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedRepository(ProvisioningContext.java:194)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:168)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:153)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.getArtifactRepositories(DownloadManager.java:110)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:95)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:111)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:255)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:105)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.internal.provisional.p2.director.PlanExecutionHelper.executePlan(PlanExecutionHelper.java:45)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl$3.commit(ProfileTransactionImpl.java:543)
+	at org.eclipse.oomph.p2.internal.core.ProfileTransactionImpl.commit(ProfileTransactionImpl.java:340)
+	at org.eclipse.oomph.setup.p2.impl.P2TaskImpl.perform(P2TaskImpl.java:733)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.doPerformNeededSetupTasks(SetupTaskPerformer.java:3334)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.access$1(SetupTaskPerformer.java:3277)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil$1.run(SetupTaskPerformer.java:4504)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.performNeededSetupTasks(SetupTaskPerformer.java:4498)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.access$0(SetupTaskPerformer.java:4496)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performNeededSetupTasks(SetupTaskPerformer.java:3268)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performTriggeredSetupTasks(SetupTaskPerformer.java:3243)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.perform(SetupTaskPerformer.java:3143)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$9.run(ProgressPage.java:575)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$11$1.run(ProgressPage.java:701)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.http.TruncatedChunkException: Truncated chunk ( expected size: 32768; actual size: 3782)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:198)
+	at java.util.zip.InflaterInputStream.fill(Unknown Source)
+	at java.util.zip.InflaterInputStream.read(Unknown Source)
+	at java.util.zip.GZIPInputStream.read(Unknown Source)
+	at org.apache.http.client.entity.LazyDecompressingInputStream.read(LazyDecompressingInputStream.java:70)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:178)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2019-03-20 21:11:27.273
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/2019-03/201903201000/artifacts.xml.xz.
+!STACK 0
+org.apache.http.TruncatedChunkException: Truncated chunk ( expected size: 32768; actual size: 3782)
+	at org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:198)
+	at java.util.zip.InflaterInputStream.fill(Unknown Source)
+	at java.util.zip.InflaterInputStream.read(Unknown Source)
+	at java.util.zip.GZIPInputStream.read(Unknown Source)
+	at org.apache.http.client.entity.LazyDecompressingInputStream.read(LazyDecompressingInputStream.java:70)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:178)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 4 2019-03-20 21:11:56.415
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2019-03-20 21:11:56.415
+!MESSAGE session context was:(profile=C__Users_Fefy6_eclipse_java-latest-released_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.apache.commons.io,2.6.0.v20190123-2029
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.apache.felix.scr,2.1.14.v20190123-1619
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.apiguardian,1.0.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ant.core,3.5.300.v20190213-1305
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ant.launching,1.2.400.v20190205-2142
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ant.ui,3.7.400.v20190218-1426
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.branding,3.0.1.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.core,3.0.1.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.stsmigration,3.0.1.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.ui,3.0.1.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.compare,3.7.500.v20190218-1850
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.compare.core,3.6.400.v20190214-2156
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.compare.win32,1.2.400.v20190213-1306
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.commands,3.9.300.v20190215-1957
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.contenttype,3.7.300.v20190215-2048
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.databinding,1.7.200.v20190216-1545
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.databinding.beans,1.4.400.v20190131-1604
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.databinding.observable,1.6.400.v20190218-2049
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.databinding.property,1.6.400.v20190215-1957
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.expressions,3.6.300.v20190218-1215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.filebuffers,3.6.500.v20190218-1547
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.filesystem,1.7.300.v20190218-2054
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.jobs,3.10.300.v20190215-2048
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.resources,3.13.300.v20190218-2054
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.runtime,3.15.200.v20190301-1641
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.variables,3.4.400.v20190214-1545
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.debug.core,3.13.200.v20190216-1557
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.debug.ui,3.14.0.v20190301-0916
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.415
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.core.commands,0.12.500.v20190131-1604
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.core.contexts,1.8.0.v20190214-1713
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.core.di.annotations,1.6.300.v20190214-1713
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.core.di.extensions,0.15.300.v20190213-1308
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.core.services,2.1.400.v20181215-2145
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.bindings,0.12.400.v20190131-1604
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.css.core,0.12.500.v20190211-2017
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.css.swt,0.13.400.v20190223-1254
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.css.swt.theme,0.12.200.v20190212-2214
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.di,1.2.500.v20190214-1316
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.dialogs,1.1.400.v20190214-1309
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.model.workbench,2.1.300.v20190213-1544
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.services,1.3.400.v20190212-2214
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench,1.9.0.v20190220-1356
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench.addons.swt,1.3.400.v20190224-1542
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench.renderers.swt,0.14.500.v20190220-1002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench.swt,0.14.500.v20190214-0851
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench3,0.15.0.v20181213-1706
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.eclemma.core,3.1.2.201903112331
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.eclemma.doc,3.1.2.201903112331
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.eclemma.ui,3.1.2.201903112331
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.doc,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.emf.common,2.15.0.v20181220-0846
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.emf.common.ui,2.16.0.v20190301-1325
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.emf.ecore,2.17.0.v20190116-0940
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.emf.ecore.edit,2.12.0.v20190226-1307
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core,1.7.5.v20190225-1757
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core.win32,1.7.5.v20190206-1811
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.help.ui,1.7.5.v20190206-1811
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui,1.7.5.v20190301-1516
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui.css,1.7.5.v20190206-1811
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.app,1.4.100.v20190215-2139
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.bidi,1.1.300.v20190218-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.common,3.10.300.v20190218-2100
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.frameworkadmin,2.1.200.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.http.jetty,3.7.0.v20190305-2216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.http.registry,1.1.700.v20190214-1948
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.http.servlet,1.6.0.v20190305-2225
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.jsp.jasper,1.1.200.v20190214-1948
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.jsp.jasper.registry,1.1.200.v20190214-1948
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.launcher,1.5.300.v20190213-1655
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.launcher.win32.win32.x86_64,1.1.1000.v20190125-2016
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.artifact.repository,1.3.0.v20190212-1235
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.core,2.6.0.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.director,2.4.300.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.directorywatcher,1.2.200.v20190204-0752
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.engine,2.6.200.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.metadata,2.4.300.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.operations,2.5.300.v20190202-1801
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.repository,2.4.300.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.touchpoint.eclipse,2.2.300.v20190215-2242
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.ui,2.5.500.v20190220-1158
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.416
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.ui.sdk,1.1.200.v20181214-0802
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.preferences,3.7.300.v20190218-2100
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.registry,3.8.300.v20190218-2100
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.security,1.3.100.v20190215-2139
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help,3.8.300.v20190216-1017
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.base,4.2.500.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.ui,4.1.400.v20190218-1039
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.webapp,3.9.400.v20190212-1458
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt,3.17.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.apt.core,3.6.300.v20190228-0624
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.compiler.apt,1.3.500.v20190304-0429
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.compiler.tool,1.2.500.v20190304-0429
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.core,3.17.0.v20190306-2240
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.core.manipulation,1.11.100.v20190301-1946
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.debug,3.12.200.v20190218-2230
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.debug.ui,3.10.200.v20190226-0733
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.doc.user,3.15.200.v20190306-0908
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit,3.11.300.v20190130-1425
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit5.runtime,1.0.400.v20190215-1312
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.launching,3.13.0.v20190222-0937
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.ui,3.17.0.v20190304-0658
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.continuation,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.http,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.io,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.security,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.server,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.servlet,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jetty.util,9.4.15.v20190215
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jface,3.15.100.v20190222-1334
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jface.databinding,1.8.500.v20190218-2049
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jface.text,3.15.100.v20190305-0811
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.archive,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.ssh.apache,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jsch.core,1.3.400.v20190214-2156
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jsch.ui,1.3.400.v20190214-2156
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ltk.core.refactoring,3.10.0.v20190216-1303
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ltk.ui.refactoring,3.9.300.v20190216-1303
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.11.0.20190220-2117
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.binaryproject,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.binaryproject.ui,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.importer,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.appender,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.configuration,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.11.0.20190220-2117
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.417
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.11.0.20190220-2117
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.11.0.20190220-2117
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.sourcelookup,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.sourcelookup.ui,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.nebula.widgets.tablecombo,1.2.0.201903071839
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.oomph.setup,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.oomph.setup.core,1.12.0.v20190206-0651
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.oomph.setup.edit,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.oomph.setup.editor,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.oomph.setup.ui,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.osgi,3.13.300.v20190218-1622
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.osgi.compatibility.state,1.1.400.v20190208-1533
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.osgi.services,3.8.0.v20190206-2147
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.osgi.util,3.5.200.v20190115-2323
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.platform,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.platform.doc.user,4.11.0.v20190227-0848
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.rcp,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.search,3.11.500.v20190218-2126
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.swt,3.110.0.v20190305-0602
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.swt.win32.win32.x86_64,3.110.0.v20190305-0602
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.team.core,3.8.500.v20190216-2155
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.team.ui,3.8.400.v20190216-2155
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.text,3.8.100.v20190306-1823
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tips.core,0.1.300.v20190218-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tips.ide,0.1.400.v20190218-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tips.json,0.1.300.v20190218-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.tips.ui,0.1.400.v20190218-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui,3.112.0.v20190205-1313
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.cheatsheets,3.5.400.v20190218-1039
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.console,3.8.400.v20190218-2131
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.editors,3.11.400.v20190218-1547
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.forms,3.7.500.v20190216-1545
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.genericeditor,1.1.300.v20190228-1402
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.ide,3.15.0.v20190301-1127
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.ide.application,1.3.200.v20190212-2214
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.intro,3.5.500.v20190218-1654
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.intro.universal,3.3.400.v20190218-1654
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.navigator,3.7.400.v20190218-2049
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.navigator.resources,3.6.400.v20190222-1251
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.themes,1.2.400.v20190223-1254
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.views,3.9.300.v20190216-1545
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.views.log,1.2.500.v20190218-0617
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.views.properties.tabbed,3.8.400.v20190215-1230
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.workbench,3.113.0.v20190219-1432
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.workbench.texteditor,3.11.300.v20190218-2126
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.update.configurator,3.4.200.v20190218-1148
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.urischeme,1.0.200.v20190219-1659
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.userstorage,1.2.0.v20190307-0457
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.userstorage.oauth,1.1.0.v20190307-0457
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.userstorage.ui,1.1.0.v20190307-0457
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.dtd.core,1.2.0.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.dtd.ui,1.1.100.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.dtd.ui.infopop,1.0.400.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.dtdeditor.doc.user,1.1.0.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.core,1.2.100.v201901310548
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.doc.user,1.2.0.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.ui,1.5.100.v201903050402
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.ui.infopop,1.0.300.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.standard.schemas,1.0.800.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xml.core,1.2.200.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xml.ui,1.2.200.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xml.ui.infopop,1.0.400.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xmleditor.doc.user,1.1.0.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xsd.core,1.2.0.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xsd.ui,1.3.200.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xsdeditor.doc.user,1.0.800.v201901071922
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.xsd,2.16.0.v20181220-0848
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.gradle.toolingapi,5.0.0.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.jacoco.agent,0.8.3.v20190219-1601
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.jacoco.core,0.8.3.v20190219-1601
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.418
+!MESSAGE No repository found containing: osgi.bundle,org.jacoco.report,0.8.3.v20190219-1601
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.api,5.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.engine,5.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.migrationsupport,5.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.params,5.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.commons,1.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.engine,1.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.launcher,1.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.runner,1.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.suite.api,1.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.junit.vintage.engine,5.4.0.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.objectweb.asm,7.0.0.v20181030-2244
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.objectweb.asm.commons,7.0.0.v20181030-2244
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.objectweb.asm.tree,7.0.0.v20181030-2244
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.opentest4j,1.1.1.v20190212-2109
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,javax.activation,1.1.0.v201211130549
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,javax.xml.bind,2.2.0.v201105210648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.bouncycastle.bcpg,1.60.0.v20181210-2057
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.bouncycastle.bcpkix,1.60.0.v20181210-2057
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: osgi.bundle,org.bouncycastle.bcprov,1.60.0.v20181210-2057
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.buildship,3.0.1.v20181217-1554
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.e4.rcp,1.6.400.v20190305-0602
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.eclemma.feature,3.1.2.201903112331
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.mylyn,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.emf.common,2.15.0.v20181220-0846
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.emf.ecore,2.17.0.v20190116-0940
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.7.5.v20190313-2005
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.core.feature,1.6.100.v20190218-2100
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.discovery.feature,1.2.200.v20190129-1112
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.extras.feature,1.4.300.v20190218-2100
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.rcp.feature,1.4.300.v20190220-1158
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.user.ui,2.4.300.v20190220-1158
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.help,2.2.500.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jdt,3.17.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit.ssh.apache,5.3.0.201903130848-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.11.0.20190220-2119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.oomph.setup.core,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.oomph.setup,1.12.0.v20190206-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.platform,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: binary,org.eclipse.platform.ide.executable.win32.win32.x86_64,4.11.0.I20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: binary,org.eclipse.platform_root,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.rcp,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: binary,org.eclipse.rcp_root,4.11.0.v20190307-0500
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.tips.feature,0.2.400.v20190218-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.userstorage,1.2.0.v20190308-0433
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_core.feature,3.13.0.v201901310548
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_ui.feature,3.13.0.v201903050402
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-03-20 21:11:56.419
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_userdoc.feature,3.11.0.v201901100226
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2019-03-20 21:11:56.428
+!MESSAGE Setup tasks were performed during startup. See 'C:\Users\Fefy6\eclipse\java-latest-released\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2019-03-23 19:44:40.655 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-23 19:44:58.280
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-23 19:45:31.415
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-25 17:48:34.556 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-25 17:49:19.361
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-26 15:49:26.511 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-26 15:50:54.231
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-26 15:54:15.391
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-03-27 10:21:13.239 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-03-27 10:21:37.473
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-03-27 10:22:19.084
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-01 14:28:42.920 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-01 14:29:01.810
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-01 14:29:38.001
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-03 09:15:48.674 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-03 09:16:54.849
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-03 17:35:47.901 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-03 17:37:53.908
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-08 10:57:32.696 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-08 10:58:51.705
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-10 09:17:17.857 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-10 09:19:06.897
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-10 10:26:16.494 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-10 10:26:31.855
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-15 11:01:00.663 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-15 11:02:00.036
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-16 10:12:14.862 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-16 10:13:43.679
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-17 10:48:40.612 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-17 10:49:04.134
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-17 10:49:56.660
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-17 18:04:31.877 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-17 18:05:17.001
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-18 09:28:43.102 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-18 09:30:09.373
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-18 14:30:57.742 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-18 14:32:38.609
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-18 14:36:38.116
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-04-29 19:44:00.179 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-04-29 19:45:06.312
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Fefy6'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

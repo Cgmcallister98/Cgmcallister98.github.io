@@ -1,0 +1,85 @@
+
+public class SavingsAccount extends Account {
+
+	public SavingsAccount() {
+		super();
+	}
+	
+	public SavingsAccount(int acctNum, String acctType, boolean acctStatus, 
+			double acctBalance, Depositor depositor) {//parameter constructor
+		super();
+	}//CHECK IF CORRECT - NEED TO ASSIGN VARIABLES}
+	
+	public int makeDeposit(double depositAmount) {
+		Transaction trans = new Transaction();
+		String str = "Deposit";
+		DateInfo today = new DateInfo();
+		if(getStatus() == true) {
+			if(depositAmount <= 0.0) {//Invald amount
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				return 0;
+			}else {
+				setBalance(getBalance() + depositAmount);
+				Bank.addSavings(depositAmount);
+				
+				trans.setTransType(str);
+				trans.setIndicator(true);
+				trans.setTransDate(today);
+				trans.setTransAmount(depositAmount);
+				addTransaction(trans);
+				return 2;
+			}
+		}else {
+			trans.setTransType(str);//closed account
+			trans.setIndicator(false);
+			trans.setTransDate(today);
+			trans.setFailure(0);
+			addTransaction(trans);
+			return -2;
+		}
+	}
+	
+	public int makeWithdrawal(double withdrawAmount) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Withdrawal";
+		if(getStatus() == true) {
+			if(withdrawAmount <= 0.0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				// invalid amount to deposit
+				return 0;
+			}else if(withdrawAmount > 0.0 && withdrawAmount > getBalance()) {
+				trans.setTransType(str);//insufficient funds
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(3);
+				addTransaction(trans);
+				return -2;
+			}else {
+				setBalance(getBalance() - withdrawAmount);
+				Bank.subtractSavings(withdrawAmount);
+				
+				trans.setTransType(str);
+				trans.setIndicator(true);
+				trans.setTransDate(today);
+				trans.setTransAmount(withdrawAmount);
+				addTransaction(trans);
+				return 2;
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+}

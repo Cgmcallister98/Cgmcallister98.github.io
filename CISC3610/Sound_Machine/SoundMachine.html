@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sound Machine</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <img src="SoundMachine.png" alt="SoundMAchine" usemap="#workmap" width="900" height="600"> 
+        <script src="SoundMachine.js"></script>
+    </head>
+    <body>
+        <div>            
+            <p>Click a Bird to hear the noise it makes </p>
+            <map name="workmap">
+                <area shape="rect" coords="0,0,300,300" alt="duck" href="#" onclick="DuckCall()">
+                <area shape="rect" coords="300,0,600,300" alt="falcon" href="#" onclick="FalconCall()">
+                <area shape="rect" coords="600,0,900,300" alt="kookaburra" href="#" onclick="KookaburraCall()">
+                <area shape="rect" coords="0,300,300,600" alt="parrot" href="#" onclick="ParrotCall()">
+                <area shape="rect" coords="300,300,600,600" alt="parrot" href="#" onclick="BirdCall()">
+                <area shape="rect" coords="600,300,900,600" alt="parrot" href="#" onclick="OwlCall()">
+                
+            </map>
+        </div>
+        <a href= "../../index.html"> Go Back to Home Page </a> 
+    </body>
+</html>

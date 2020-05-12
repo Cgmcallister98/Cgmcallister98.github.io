@@ -1,0 +1,19 @@
+
+public class CDAccount extends Account {
+
+	public CDAccount() {
+		super();
+	}
+	
+	public CDAccount(int test) {//parameter constructor
+		super(test);
+	}
+	
+	public int makeDeposit(double depositAmount, int newDate) {
+		
+	}
+	
+	public int makeWithdrawal(double depositAmount, int newDate) {
+		
+	}
+}

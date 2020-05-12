@@ -1,0 +1,10 @@
+Cass Idy 111222333 999999 Savings 100.00 0 0 0 false
+Nivek Frank 999888777 214365 CD 200.00 2 2 2020 true
+Elen Tulip 765432189 444555 CD 200.43 1 20 2019 true
+Nell Web 557766432 986754 Checking 25.54 0 0 0 true
+Kim Eugene 321789654 211234 CD 124.78 7 12 2018 true
+Jose Giovani 592311567 911911 Savings 400.00 0 0 0 true
+Tina Real 543876921 119119 Checking 0.0 0 0 0 true
+Topher Tony 999437233 473288 Checking 100.00 0 0 0 true
+Veronica Welsh 884713692 654321 Checking 1.00 0 0 0 true
+Teresa Gordo 134578912 437645 Savings 525.60 0 0 0 true

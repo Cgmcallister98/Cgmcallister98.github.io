@@ -1,0 +1,209 @@
+
+public class CDAccount extends Account {
+
+	public CDAccount() {
+		super();
+	}
+	
+	public CDAccount(int test) {//parameter constructor
+		super(test);
+	}
+	
+	public int makeDeposit(double depositAmount, int newDate) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Deposit";
+		if(getStatus()==true) {
+			if(today.compareDate(getDateInfo()) == 0) {
+				trans.setTransType(str);//maturity date not reached
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(1);
+				addTransaction(trans);
+				return -1;
+			}else if(today.compareDate(getDateInfo()) == 1 && depositAmount <= 0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				// invalid amount to deposit
+				return 0;
+			}else if(today.compareDate(getDateInfo()) == 1 && Amount > 0.0 && withdrawAmount > getBalance()) {
+				trans.setTransType(str);//insufficient funds
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(3);
+				addTransaction(trans);
+				return -2;
+			}else {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);					
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdraw\\\Amount);
+					addTransaction(trans);
+					return 1;
+				}
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+	
+	public int makeWithdrawal(double withdrawAmount, int newDate) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Withdrawal";
+		if(getStatus()==true) {
+			if(today.compareDate(getDateInfo()) == 0) {
+				trans.setTransType(str);//maturity date not reached
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(1);
+				addTransaction(trans);
+				return -1;
+			}else if(today.compareDate(getDateInfo()) == 1 && withdrawAmount <= 0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				// invalid amount to deposit
+				return 0;
+			}else if(today.compareDate(getDateInfo()) == 1 && withdrawAmount > 0.0 && withdrawAmount > getBalance()) {
+				trans.setTransType(str);//insufficient funds
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(3);
+				addTransaction(trans);
+				return -2;
+			}else {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);					
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					setDateInfo(date);
+					setBalance(getBalance() - withdrawAmount);
+					Bank.subtractCD(withdrawAmount);
+					
+					trans.setTransType(str);
+					trans.setIndicator(true);
+					trans.setTransDate(today);
+					trans.setTransAmount(withdrawAmount);
+					addTransaction(trans);
+					return 1;
+				}
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+}

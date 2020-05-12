@@ -1,0 +1,165 @@
+
+public class CheckingAccount extends Account {
+
+	public CheckingAccount() {
+		super();
+	}
+	
+	public CheckingAccount(int test) {//parameter constructor
+		super(test);
+	}
+	
+	public int makeDeposit(double depositAmount) {
+		Transaction trans = new Transaction();
+		String str = "Deposit";
+		DateInfo today = new DateInfo();
+		if(getStatus() == true) {
+			if(depositAmount <= 0.0) {//Invalid amount
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				return 0;
+			}else {
+				setBalance(getBalance() + depositAmount);
+				Bank.addSavings(depositAmount);
+				
+				trans.setTransType(str);
+				trans.setIndicator(true);
+				trans.setTransDate(today);
+				trans.setTransAmount(depositAmount);
+				addTransaction(trans);
+				return 2;
+			}
+		}else {
+			trans.setTransType(str);//closed account
+			trans.setIndicator(false);
+			trans.setTransDate(today);
+			trans.setFailure(0);
+			addTransaction(trans);
+			return -2;
+		}
+	}
+	
+	public int makeWithdrawal(double withdrawAmount) {
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Withdrawal";
+		if(getStatus() == true) {
+			if(withdrawAmount <= 0.0) {
+				trans.setTransType(str);
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(2);
+				addTransaction(trans);
+				// invalid amount to deposit
+				return 0;
+			}else if(withdrawAmount > 0.0 && withdrawAmount > getBalance()) {
+				trans.setTransType(str);//insufficient funds
+				trans.setIndicator(false);
+				trans.setTransDate(today);
+				trans.setFailure(3);
+				addTransaction(trans);
+				return -2;
+			}else if(getBalance() < 2500) {
+				setBalance(getBalance() - withdrawAmount - 1.5);
+				Bank.subtractSavings(withdrawAmount+1.5);
+				
+				trans.setTransType(str);
+				trans.setIndicator(true);
+				trans.setTransDate(today);
+				trans.setTransAmount(withdrawAmount);
+				addTransaction(trans);
+				return 2;
+			}
+			else {
+				setBalance(getBalance() - withdrawAmount);
+				Bank.subtractSavings(withdrawAmount);
+				
+				trans.setTransType(str);
+				trans.setIndicator(true);
+				trans.setTransDate(today);
+				trans.setTransAmount(withdrawAmount);
+				addTransaction(trans);
+				return 2;
+			}
+		}
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -3;
+	}
+	
+	public int clearCheck(double checkToClear, DateInfo dateToClear) { 
+		DateInfo today = new DateInfo();
+		Transaction trans = new Transaction();
+		String str = "Clear Check"; 
+		if(getStatus() == true) {
+			if(today.clearCheckDate(dateToClear) == 1){
+				if(getBalance() < checkToClear && getBalance() < 2.5 ) {
+
+					Bank.subtractChecking(getBalance());
+					setBalance(0.0);
+					
+					trans.setTransType(str);
+					trans.setIndicator(false);
+					trans.setTransDate(today);
+					trans.setFailure(4);
+					addTransaction(trans);
+					return 0;
+		}
+		else if (getBalance() < checkToClear) {
+			setBalance(getBalance() - 2.5);
+			Bank.subtractChecking(2.5);
+			
+			trans.setTransType(str);
+			trans.setIndicator(false);
+			trans.setTransDate(today);
+			trans.setFailure(4);
+			addTransaction(trans);
+			return -1;
+		}
+		else if(getBalance() < 2500) {
+			setBalance(getBalance() - checkToClear-1.5);
+			Bank.subtractChecking(checkToClear+1.5);
+			
+			trans.setTransType(str);
+			trans.setIndicator(true);
+			trans.setTransDate(today);
+			trans.setTransAmount(checkToClear);
+			addTransaction(trans);
+			return 1;
+		}
+		else{
+			setBalance(getBalance() - checkToClear);
+			Bank.subtractChecking(checkToClear);
+			
+			trans.setTransType(str);
+			trans.setIndicator(true);
+			trans.setTransDate(today);
+			trans.setTransAmount(checkToClear);
+			addTransaction(trans);
+			return 1;
+		}
+	  }
+		else {
+			trans.setTransType(str);//check past 6 month period
+			trans.setIndicator(false);
+			trans.setTransDate(today);
+			trans.setFailure(5);
+			addTransaction(trans);
+			return -4;
+		}
+	}else {
+		trans.setTransType(str);//closed account
+		trans.setIndicator(false);
+		trans.setTransDate(today);
+		trans.setFailure(0);
+		addTransaction(trans);
+		return -2;
+	}
+	}
+}

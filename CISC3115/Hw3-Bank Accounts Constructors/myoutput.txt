@@ -1,0 +1,168 @@
+
+		Database of Bank Accounts
+
+First Name   Last Name 	  SSID     Account   Type    Balance  Maturity Date
+Cassidy     Mcallister  314681159  123456  Checking   200.55
+Kevin       Francis     143618195  567890        CD  1234.56   2  25  2019
+Helen       Rose        123549876  987654  Checking     2.33
+Helen       Weber       432126675  222222        CD  5000.00   2  22  2019
+Mike        Gene        555446666  333333        CD   999.99   2   1  2018
+Joe         Gonzalez    718972876  555555  Checking   250.00
+Steven      Andrews     675881234  347331        CD   365.67   2   1  2018
+Steven      Andrews     675881234  917685  Checking     0.00
+Rita        Pearl       676349001  646496        CD     0.00   3  24  2018
+Christopher Anthony     216980310  987659   Savings  5256.00
+
+Transaction Requested: Balance Inquiry
+Account Number: 123456
+Current Balance: $200.55
+
+Transaction Requested: Balance Inquiry
+Error: Account number 123457 does not exist
+
+Transaction Requested: Deposit
+Error: Account number 123457 does not exist
+
+
+
+Transaction Requested: Deposit
+Account Number: 123456
+Balance: $200.55
+Amount to Deposit: $5.0
+New Balance: $205.55
+
+
+Transaction Requested: Deposit
+Account Number: 222222
+Balance: $5000.00
+Amount to Deposit: $5.0
+New Balance: $5005.00
+New Maturity Date:  8, 28, 2019
+
+
+Transaction Requested: Deposit
+Error: Maturity Date has not been reached
+Maturity Date:  8, 28, 2019
+
+
+Transaction Requested: Deposit
+Account Number: 567890
+Balance: $1234.56
+Amount to Deposit: $5.0
+New Balance: $1239.56
+New Maturity Date:  2, 28, 2020
+
+
+Transaction Requested: Withdraw
+Account Number: 333333
+Balance: $999.99
+Amount to Withdraw: $5.0
+New Balance: $994.99
+New Maturity Date:  8, 28, 2020
+
+Transaction Requested: Withdraw
+Error: Maturity Date has not been reached
+Maturity Date:  8, 28, 2020
+
+Transaction Requested: Withdraw
+Account Number: 347331
+Balance: $365.67
+Amount to Withdraw: $5.0
+New Balance: $360.67
+New Maturity Date:  2, 28, 2021
+
+
+Transaction Requested: Withdrawal
+Error: Account number 123457 does not exist
+
+
+Transaction Requested: Clear Check
+Account Number: 123456
+Check Amount: 5.0
+Check Cleared
+New Balance: $200.55
+
+Transaction Requested: Clear Check
+Error: Check has past 6 Month clear Period
+
+Transaction Requested: Clear Check
+Error: Not a Checking Account
+
+
+Transaction Requested: Account Info
+Account Holder: Steven Andrews
+Account Holder SSID: 675881234
+Account Number: 347331
+Account Type: CD
+Account Balance: 360.67
+Maturity Date:  2, 28, 2021
+
+Transaction Requested: Account Info
+Account Holder: Steven Andrews
+Account Holder SSID: 675881234
+Account Number: 917685
+Account Type: Checking
+Account Balance: 0.0
+
+
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Cass Idy
+New Account Holder SSID: 123456789
+New Account Number: 123457
+New Account Type: Savings
+
+
+
+Transaction Requested: Deposit
+Account Number: 123457
+Balance: $0.00
+Amount to Deposit: $100.0
+New Balance: $100.00
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Steve Jobs
+New Account Holder SSID: 987654321
+New Account Number: 111119
+New Account Type: CD
+Maturity Date:  8, 28, 2019
+
+Transaction Requested: Delete Account
+Error: Account 123456 has a non-zero balance
+Account Balance: 195.55
+
+Transaction Requested: Delete Account
+Account Deleted: 917685
+
+Transaction Requested: Delete Account
+Error: Account 555555 has a non-zero balance
+Account Balance: 250.0
+
+
+Transaction Requested: Withdrawal
+Account Number: 555555
+Balance: $250.00
+Amount to Withdraw: $250.0
+New Balance: $0.00
+Transaction Requested: Delete Account
+Account Deleted: 555555
+
+
+		Database of Bank Accounts
+
+First Name   Last Name 	  SSID     Account   Type    Balance  Maturity Date
+Cassidy     Mcallister  314681159  123456  Checking   195.55
+Kevin       Francis     143618195  567890        CD  1239.56   2  28  2020
+Helen       Rose        123549876  987654  Checking     2.33
+Helen       Weber       432126675  222222        CD  5005.00   8  28  2019
+Mike        Gene        555446666  333333        CD   994.99   8  28  2020
+Steve       Jobs        987654321  111119        CD     0.00   8  28  2019
+Steven      Andrews     675881234  347331        CD   360.67   2  28  2021
+Steve       Jobs        987654321  111119        CD     0.00   8  28  2019
+Rita        Pearl       676349001  646496        CD     0.00   3  24  2018
+Christopher Anthony     216980310  987659   Savings  5256.00
+Cass        Idy         123456789  123457   Savings   100.00
+Steve       Jobs        987654321  111119        CD     0.00   8  28  2019
+

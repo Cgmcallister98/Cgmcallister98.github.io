@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;myinput.txt&apos; to &apos;Hw7/src&apos;&#x0D;&#x0A;- Original project: &apos;Hw5&apos;&#x0D;&#x0A;- Destination element: &apos;Hw7/src&apos;&#x0D;&#x0A;- Original element: &apos;myinput.txt&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=Hw7/src" element1="myinput.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1555340874244" units="0" version="1.0"/>
+</session>

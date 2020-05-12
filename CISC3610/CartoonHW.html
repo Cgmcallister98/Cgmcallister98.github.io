@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title>Cartoon Homework</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <canvas id = "myCanvas" width="500" height="600"></canvas>
+            <script> 
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+              
+                //The creation of the ground space
+                ctx.fillStyle = "green";
+                ctx.fillRect(0, 350, 498, 148);
+                
+                //The creation of the Sky space
+                ctx.fillStyle = "#87CEEB";
+                ctx.fillRect(0, 0, 498, 349);
+                
+                //Creation of the sun
+                ctx.beginPath();
+                ctx.arc(20, 20, 40, 0, 2 * Math.PI);
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.stroke();
+                
+                //Creation of the house base
+                ctx.fillStyle = "brown";
+                ctx.fillRect(275, 275, 75, 75);
+                
+                //Creation of the roof
+                ctx.beginPath();
+                ctx.moveTo(315, 200);
+                ctx.lineTo(265, 275);
+                ctx.lineTo(360, 275);
+                ctx.fillStyle = "red";
+                ctx.fill();
+                
+                //Creation of the window
+                ctx.fillStyle = "#000000";
+                ctx.fillRect(280, 295, 25, 25);
+                
+                //creation of the door
+                ctx.fillStyle = "#8b5a2b";
+                ctx.fillRect(315, 300, 25, 50);
+                
+                //Using the same color for the creation of the tree trunk
+                ctx.fillRect(100, 275, 20, 75);
+                
+                //Creation of the tree top
+                ctx.beginPath();
+                ctx.fillStyle = "green";
+                ctx.arc(110, 250, 40, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.stroke();
+                
+                //For Loop to create the steps leading to the house
+                var x = 315;
+                var y = 351;
+                for(var i = 0; i < 10; i++){
+                    ctx.fillStyle = "grey";
+                    ctx.fillRect(x, y, 25, 10);
+                    y += 15;
+                }
+                
+                //Text at bottom of screen
+                ctx.font = "30px Arial";
+                ctx.fillStyle = "#000000";
+                ctx.fillText("Summer House", 120, 525);
+                
+                
+            </script>   
+        </div>
+ <a href= "../index.html"> Go Back to Home Page </a>  
+ </body>
+</html>

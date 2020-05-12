@@ -1,0 +1,280 @@
+
+		Database of Bank Accounts
+
+First Name  Last Name 	  SSID     Account   Type    Balance  Status  Maturity Date
+Cass        Idy         111222333  999999   Savings   100.00  Closed
+Nivek       Frank       999888777  214365        CD   200.00    Open   3/2/2020
+Elen        Tulip       765432189  444555        CD   200.43    Open   2/20/2019
+Nell        Web         557766432  986754  Checking    25.54    Open
+Kim         Eugene      321789654  211234        CD   124.78    Open   8/12/2018
+Jose        Giovani     592311567  911911   Savings   400.00    Open
+Tina        Real        543876921  119119  Checking     0.00    Open
+Topher      Tony        999437233  473288  Checking   100.00    Open
+Veronica    Welsh       884713692  654321  Checking     1.00    Open
+Teresa      Gordo       134578912  437645   Savings   525.60    Open
+
+Error: z is an invalid selection - try again
+
+Error: a is an invalid selection - try again
+
+Transaction Requested: Withdrawal
+Error: Account number does not exist
+
+Transaction Requested: Withdraw
+Error: Account is closed
+
+Transaction Requested: Withdraw
+Error: Maturity Date has not been reached
+Maturity Date:  3, 2 , 2020
+
+
+Transaction Requested: Withdraw
+Account Number: 444555
+Balance: $200.43
+Amount to Withdraw: $-5.0
+Error: Invalid amount
+
+
+Transaction Requested: Withdraw
+Account Number: 444555
+Balance: $200.43
+Amount to Withdraw: $5.0
+New Balance: $195.43
+New Maturity Date:  9, 7 , 2019
+
+Transaction Requested: Withdrawal
+Account Number: 986754
+Balance: $25.54
+Amount to Withdraw: $-1.0
+Error: Invalid amount
+
+Transaction Requested: Withdrawal
+Account Number: 986754
+Balance: $25.54
+Amount to Withdraw: $30.0
+Error: Insufficient funds
+
+Transaction Requested: Withdrawal
+Account Number: 986754
+Balance: $25.54
+Amount to Withdraw: $5.0
+New Balance: $20.54
+
+Transaction Requested: Deposit
+Error: Account number does not exist
+
+Transaction Requested: Deposit
+Error: Account is closed
+
+Transaction Requested: Deposit
+Error: Maturity Date has not been reached
+Maturity Date:  3, 2 , 2020
+
+
+Transaction Requested: Deposit
+Account Number: 211234
+Balance: $124.78
+Amount to Deposit: $-5.0
+Error: Invalid amount
+
+
+Transaction Requested: Deposit
+Account Number: 211234
+Balance: $124.78
+Amount to Deposit: $5.0
+New Balance: $129.78
+New Maturity Date:  3, 7 , 2020
+
+Transaction Requested: Deposit
+Account Number: 911911
+Balance: $400.00
+Amount to Deposit: $-1.0
+Error: Invalid amount
+
+Transaction Requested: Deposit
+Account Number: 911911
+Balance: $400.00
+Amount to Deposit: $500.0
+New Balance: $900.00
+
+Transaction Requested: Clear Check
+Error: Account number does not exist
+
+Transaction Requested: Clear Check
+Error: Account is closed
+
+Transaction Requested: Clear Check
+Error: Not a Checking Account
+
+
+Transaction Requested: Clear Check
+Account Number: 473288
+Check Amount: 500.0
+Error: Check Bounced
+$2.50 has been deducted from Account
+New Balance: $97.50
+
+
+Transaction Requested: Clear Check
+Account Number: 654321
+Check Amount: 5.0
+Error: Check Bounced
+Remaining Account Balance Deducted
+Balance: $0.00
+
+
+Transaction Requested: Clear Check
+Account Number: 473288
+Check Amount: 5.0
+Check Cleared
+New Balance: $92.50
+
+
+Transaction Requested: Clear Check
+Account Number: 473288
+Check Amount: 5.0
+Check Cleared
+New Balance: $87.50
+
+Transaction Requested: New Account
+Account already exists
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Tess Evans
+New Account Holder SSID: 565787131
+New Account Number: 123456
+New Account Type: CD
+New Account Status: Open
+Maturity Date:  9, 7 , 2019
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Tess Evans
+New Account Holder SSID: 565787131
+New Account Number: 123457
+New Account Type: Savings
+New Account Status: Open
+
+Transaction Requested: Deposit
+Account Number: 123457
+Balance: $0.00
+Amount to Deposit: $5.0
+New Balance: $5.00
+
+Transaction Requested: Withdrawal
+Account Number: 123457
+Balance: $5.00
+Amount to Withdraw: $3.0
+New Balance: $2.00
+
+Transaction Requested: Balance Inquiry
+Account Number: 654321
+Current Balance: $0.00
+
+Transaction Requested: Balance Inquiry
+Account Number: 214365
+Current Balance: $200.00
+
+Account Holder SSID: 888888888
+Error: No Account With this SSID
+
+Transaction Requested: Account Info
+Account Holder: Tess Evans
+Account Holder SSID: 565787131
+Account Number: 123456
+Account Type: CD
+Account Balance: 0.0
+Maturity Date:  9, 7 , 2019
+Transaction Requested: Account Info
+Account Holder: Tess Evans
+Account Holder SSID: 565787131
+Account Number: 123457
+Account Type: Savings
+Account Balance: 2.0
+
+Account Holder SSID: 888888888
+Error: No Account With this SSID
+
+Transaction Requested: Account Info with History
+Account Holder: Tess Evans
+Account Holder SSID: 565787131
+Account Number: 123456
+Account Type: CD
+Account Balance: 0.0
+Maturity Date:  9, 7 , 2019
+Transaction History: 
+
+Transaction: New Account
+Date:  3/7/2019 
+Transaction Requested: Account Info with History
+Account Holder: Tess Evans
+Account Holder SSID: 565787131
+Account Number: 123457
+Account Type: Savings
+Account Balance: 2.0
+Transaction History: 
+New Account
+Transaction: New Account
+Date:  3/7/2019 
+Transaction: deposit
+Amount: 5.0
+Date:  2/7/2019 
+Transaction: Withdrawal
+Amount: 3.0
+Date:  2/7/2019 
+
+Transaction Requested: Close Account
+Error: Account number does not exist
+
+Transaction Requested: Close Account
+Error: Account already closed
+
+Transaction Requested: Close Account
+Account Number: 214365
+Account Closed
+
+Transaction Requested: Reopen Account
+Error: Account number does not exist
+
+Transaction Requested: Reopen Account
+Error: Account already open
+
+Transaction Requested: Reopen Account
+Account Number: 999999
+Account Reopened
+
+Transaction Requested: Delete Account
+Error: Account number does not exist
+
+Transaction Requested: Delete Account
+Error: Account has a non-zero balance
+Account Balance: 900.0
+
+Transaction Requested: Withdrawal
+Account Number: 911911
+Balance: $900.00
+Amount to Withdraw: $900.0
+New Balance: $0.00
+
+Transaction Requested: Delete Account
+Account Deleted: 911911
+
+Transaction Requested: Delete Account
+Account Deleted: 119119
+
+
+		Database of Bank Accounts
+
+First Name  Last Name 	  SSID     Account   Type    Balance  Status  Maturity Date
+Cass        Idy         111222333  999999   Savings   100.00    Open
+Nivek       Frank       999888777  214365        CD   200.00  Closed   3/2/2020
+Elen        Tulip       765432189  444555        CD   195.43    Open   9/7/2019
+Nell        Web         557766432  986754  Checking    20.54    Open
+Kim         Eugene      321789654  211234        CD   129.78    Open   3/7/2020
+Tess        Evans       565787131  123457   Savings     2.00    Open
+Tess        Evans       565787131  123456        CD     0.00    Open   9/7/2019
+Topher      Tony        999437233  473288  Checking    87.50    Open
+Veronica    Welsh       884713692  654321  Checking     0.00    Open
+Teresa      Gordo       134578912  437645   Savings   525.60    Open
+

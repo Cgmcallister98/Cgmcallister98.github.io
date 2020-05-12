@@ -1,0 +1,151 @@
+
+		Database of Bank Accounts
+
+First Name   Last Name 	    SSID    Account  Type     Balance
+Cassidy      Mcallister   314681159 123456  Checking $ 200.55
+Kevin        Francis      143618195 567890  Savings  $1234.56
+Helen        Rose         123549876 987654  Checking $   2.33
+Helen        Weber        432126675 222222  CD       $5000.00
+Mike         Gene         555446666 333333  Checking $ 999.99
+Joe          Gonzalez     718972876 555555  Checking $ 250.00
+Steven       Andrews      675881234 347331  Savings  $ 365.67
+Steven       Andrews      675881234 917685  Checking $   0.00
+Rita         Pearl        676349001 646496  CD       $   0.00
+Christopher  Anthony      216980310 987659  Savings  $5256.00
+
+Transaction Requested: Balance Inquiry
+Account Number: 555555
+Current Balance: $250.00
+
+Transaction Requested: Balance Inquiry
+Error: Account number 123457 does not exist
+
+Transaction Requested: Deposit
+Account Number: 347331
+Old Balance: $365.67
+Amount to Deposit: $5.0
+New Balance: $370.67
+
+Transaction Requested: Deposit
+Account Number: 347331
+Amount to Deposit: $-1.0
+Error: $-1.00 is an invalid amount
+
+Transaction Requested: Deposit
+Error: Account number 666999 does not exist
+
+Transaction Requested: Withdrawal
+Account Number: 567890
+Old Balance: $1234.56
+Amount to Withdraw: $34.56
+New Balance: $1200.00
+
+Transaction Requested: Withdrawal
+Account Number: 987654
+Amount to Withdraw: $-3.0
+Error: $-3.00 is an invalid amount
+
+Transaction Requested: Withdrawal
+Account Number: 222222
+Amount to Withdraw: $5001.0
+Error: Insuffiecnt funds
+Account Balance: 5000.0
+
+
+Transaction Requested: Withdrawal
+Error: Account number 111111 does not exist
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Geoff Rogers
+New Account Holder SSID: 134861049
+New Account Number: 123457
+New Account Type: Savings
+
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Roddy Smith
+New Account Holder SSID: 123654987
+New Account Number: 696969
+New Account Type: Checking
+
+
+Transaction Requested: New Account
+New Account Created
+New Account Holder: Johnny Roger
+New Account Holder SSID: 987456132
+New Account Number: 321789
+New Account Type: CD
+
+
+Transaction Requested: New Account
+Error: Account number 123456 already exists
+
+Transaction Requested: Deposit
+Account Number: 123457
+Old Balance: $0.00
+Amount to Deposit: $10.5
+New Balance: $10.50
+
+Transaction Requested: Deposit
+Account Number: 696969
+Old Balance: $0.00
+Amount to Deposit: $3.5
+New Balance: $3.50
+
+Transaction Requested: Deposit
+Account Number: 321789
+Old Balance: $0.00
+Amount to Deposit: $1000.0
+New Balance: $1000.00
+
+Transaction Requested: Withdrawal
+Account Number: 321789
+Old Balance: $1000.00
+Amount to Withdraw: $500.0
+New Balance: $500.00
+
+Transaction Requested: Delete Account
+Account Deleted: 917685
+
+Transaction Requested: Delete Account
+Error: Account 222222 has a non-zero balance
+Account Balance: 5000.0
+
+Transaction Requested: Delete Account
+Error: Account 777777 does not exist
+
+Error: a is an invalid selection - try again
+
+Error: s is an invalid selection - try again
+
+Transaction Requested: Account Info
+Account Holder: Steven Andrews
+Account Holder SSID: 675881234
+Account Number: 347331
+Account Type: Savings
+Account Balance: 370.67
+
+
+Account Holder SSID: 111111111
+Error: No Account With this SSID
+
+
+
+		Database of Bank Accounts
+
+First Name   Last Name 	    SSID    Account  Type     Balance
+Cassidy      Mcallister   314681159 123456  Checking $ 200.55
+Kevin        Francis      143618195 567890  Savings  $1200.00
+Helen        Rose         123549876 987654  Checking $   2.33
+Helen        Weber        432126675 222222  CD       $5000.00
+Mike         Gene         555446666 333333  Checking $ 999.99
+Joe          Gonzalez     718972876 555555  Checking $ 250.00
+Steven       Andrews      675881234 347331  Savings  $ 370.67
+Johnny       Roger        987456132 321789  CD       $ 500.00
+Rita         Pearl        676349001 646496  CD       $   0.00
+Christopher  Anthony      216980310 987659  Savings  $5256.00
+Geoff        Rogers       134861049 123457  Savings  $  10.50
+Roddy        Smith        123654987 696969  Checking $   3.50
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;HW4-ArrayList Bank Account&apos;&#x0D;&#x0A;- Original project: &apos;HW4-ArrayList Bank Account&apos;&#x0D;&#x0A;- Original element: &apos;myoutput.txt&apos;" description="Delete element" element1="myoutput.txt" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1551418356735" subPackages="false" version="1.0"/>
+</session>

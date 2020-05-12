@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bar Graph Lab</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <canvas id="myCanvas" width ="400" height="300"></canvas>   
+            <script>
+                var fruit = [{name: "Apple", quantity: 20, color: "red"},
+                {name: "Orange", quantity: 10, color: "orange"},
+                {name: "Banana", quantity: 15, color: "yellow"},
+                {name: "Kiwi", quantity: 3, color: "green"},
+                {name: "Blueberry", quantity: 5, color: "blue"},
+                {name: "Grapes", quantity: 8, color: "purple"}];
+               
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "20px Arial";
+                var x = 10;
+                var y = 30;
+                for(var i=0; i <= 5; i++){
+                ctx.fillStyle = fruit[i].color;
+                ctx.fillRect(0, x, fruit[i].quantity * 25, 40);
+                ctx.fillStyle = "black";
+                ctx.fillText(fruit[i].name + ": " +fruit[i].quantity, 10, y);
+                ctx.stroke();
+                x+=42;
+                y+=43;
+                }
+            </script>
+        </div>
+ <a href= "../index.html"> Go Back to Home Page </a>
+    </body>
+</html>
+

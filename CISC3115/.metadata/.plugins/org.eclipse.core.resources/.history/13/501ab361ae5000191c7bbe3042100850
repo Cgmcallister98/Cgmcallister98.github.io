@@ -1,0 +1,403 @@
+import java.util.ArrayList;
+
+public class Account {
+	private int acctNum;
+	private String acctType;
+	private boolean acctStatus;
+	private double acctBalance;
+	private ArrayList<Transaction> transaction;
+	private Depositor depositor;
+	private DateInfo date;
+
+	
+	public Account() {//no-arg constructor
+		acctNum = 0;
+		acctType = "";
+		acctStatus = false;
+		acctBalance = 0.0;
+		transaction = new ArrayList<>();
+		depositor = new Depositor();
+		date = new DateInfo();
+	}
+	
+	//Arg Constructor w/ date
+	public Account(int accNum, String accType, boolean accStatus, double balance, 
+			Depositor dpst, DateInfo date ) {
+		acctNum = accNum;
+		acctType = accType;
+		acctStatus = accStatus;
+		acctBalance = balance;
+		depositor = dpst;
+		this.date = date;
+		transaction = new ArrayList<>();
+	}
+	
+	//Arg Constructor w/ no date
+	public Account(int accNum, String accType, boolean accStatus, double balance,
+			Depositor dpst) {
+		acctNum = accNum;
+		acctType = accType;
+		acctStatus = accStatus;
+		acctBalance = balance;
+		depositor = dpst;
+		transaction = new ArrayList<>();
+	}
+	
+	public Account(Account acct) {//copy constructor
+		acctNum = acct.acctNum;
+		acctType = acct.acctType;
+		acctStatus = acct.acctStatus;
+		acctBalance = acct.acctBalance;
+		depositor = new Depositor(acct.depositor);
+		date = new DateInfo(acct.date);
+		transaction = acct.transaction; //fix this copy
+	}
+	
+	
+	public Account(int acctNum2, String acctType2, boolean acctStatus2, double acctBalance2,
+			ArrayList<Transaction> transaction2, Depositor depositor2, DateInfo date2) {
+			acctNum = acctNum2;
+			acctType = acctType2;
+			acctStatus = acctStatus2;
+			acctBalance = acctBalance2;
+			depositor = depositor2;
+			date = date2;
+			transaction = transaction2;
+	}
+
+	/*
+	 * Method: makeDeposit
+	 * Input: depositAmount- amount to deposit into Acc
+	 * Process: checks if depositAmount is valid, then if its not returns error
+	 * identifier else returns success identifier and makes deposit. 
+	 * Output: success or failure Identifier
+	 */
+	public int makeDeposit(double depositAmount, int newDate) {
+		DateInfo today = new DateInfo();
+	  if(acctStatus == true) {
+		if(acctType.contentEquals("CD")) {
+			if(today.compareDate(date) == 0) {
+				return -1;
+			}else if(today.compareDate(date) == 1 && depositAmount <= 0) {
+				return 0;
+			}else if(today.compareDate(date) == 1 && depositAmount > 0) {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);					
+					this.date=date;
+					acctBalance += depositAmount;
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+1);
+					this.date=date;
+					acctBalance += depositAmount;
+					return 1;
+				}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					this.date=date;
+					acctBalance += depositAmount;
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					this.date=date;
+					acctBalance += depositAmount;
+					return 1;
+				}
+			}
+		} else {
+			if(depositAmount <= 0)
+				return 0;
+			else {
+				acctBalance += depositAmount;
+				return 2;
+			}
+		}
+	  }
+	  return -2;
+	}
+	
+	/*
+	 * Method: makeWithdrawal
+	 * Input: amountToWithdraw- amount to withdraw from Acc
+	 * Process: checks if amountToWithdraw is valid, then if valid in context
+	 * to the account, if its not returns error identifier else returns 
+	 * success identifier and makes withdrawal. 
+	 * Output: success or failure Identifier
+	 */
+	public int makeWithdrawal(double amountToWithdraw, int newDate) {
+		DateInfo today = new DateInfo();
+		if(acctStatus == true) {
+		if(acctType.equals("CD")) {
+			if(today.compareDate(date) == 0) {
+				return -1;
+			}else if(today.compareDate(date) == 1 && amountToWithdraw <= 0) {
+				return 0;
+			}else if(today.compareDate(date) == 1 && amountToWithdraw > 0.0 && amountToWithdraw > acctBalance) {
+				return -2;
+			}else {
+				if(newDate == 6) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);					
+					this.date=date;
+					acctBalance -= amountToWithdraw;
+					return 1;
+				}
+				if(newDate == 12) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+1);
+					this.date=date;
+					acctBalance -= amountToWithdraw;
+					return 1;
+				}
+				if(newDate == 18) {
+					DateInfo date = new DateInfo();
+					
+					date.setMonth(date.getMonth()+6);
+					date.setYear(date.getYear()+1);
+					this.date=date;
+					acctBalance -= amountToWithdraw;
+					return 1;
+				}
+				if(newDate == 24) {
+					DateInfo date = new DateInfo();
+					
+					date.setYear(date.getYear()+2);
+					this.date=date;
+					acctBalance -= amountToWithdraw;
+					return 1;
+				}
+			}
+		}else {
+			if(amountToWithdraw <= 0.0)
+				return 0;
+			else if(amountToWithdraw > 0.0 && amountToWithdraw > acctBalance)
+				return -2;
+			else {
+				acctBalance -= amountToWithdraw;
+				return 2;
+			}
+		}
+		}
+		return -3;
+	}
+	/*
+	 * Method: clearCheck
+	 * Input: checkToClear- amount to clear from Acc
+	 * Process: checks if checkToClear is valid, then if valid in context
+	 * to the account, if its not returns error identifier and deducts error 
+	 * amount else returns success identifier and makes withdrawal.
+	 * Output: success or failure Identifier 
+	 */
+	public int clearCheck(double checkToClear, DateInfo dateToClear) { 
+		DateInfo today = new DateInfo();
+		if(acctType.equals("Checking")) {
+		 if(acctStatus == true) {
+			if(today.clearCheckDate(dateToClear) == 1){
+				if(getBalance() < checkToClear && getBalance() < 2.5 ) {
+					acctBalance -= acctBalance;
+					return 0;
+		}
+		else if (getBalance() < checkToClear) {
+			acctBalance -= 2.5;
+			return -1;
+		}
+		else {
+			acctBalance -= checkToClear;
+			return 1;
+		}
+	  }
+	}else return -2;
+	}
+		return -3;
+	}
+	
+	/*Method: closeAcct
+	 * Input: status- reference to status of account
+	 * Process: checks to see if status is true if so sets it to false then 
+	 * returns true to signify closed account else returns false;
+	 * Output: true or false depending on if account was closed or not
+	 */
+	public boolean closeAcct() {
+		if(acctStatus == true) {
+			acctStatus = false;
+			return true;
+		} else return false;
+	}
+	
+	/*Method: reOpenAcct
+	 * Input: status- reference to status of account
+	 * Process: checks to see if status is false if so sets it to true then 
+	 * returns true to signify closed account else returns false;
+	 * Output: true or false depending on if account was creOpened or not
+	 */
+	public boolean reopenAcct() {
+		if(acctStatus == false) {
+			acctStatus = true;
+			return true;
+		} else return false;
+	}
+	
+	//Setters
+	public void setAcctNum(int num) {
+		acctNum = num;
+	}
+		
+	public void setAcctType(String str) {
+		acctType = str;
+	}
+		
+	public void setBalance(double num) {
+		acctBalance = num;
+	}
+		
+	public void setDepositor (Depositor dpstr) {
+		depositor = dpstr;
+	}
+		
+	public void setDateInfo(DateInfo date) {
+		this.date = date;
+	}
+	
+	public void addTransaction(Transaction newTrans) {
+		transaction.add(newTrans);
+	}
+	
+	public void setStatus(boolean status) {
+		acctStatus = status;
+	}
+		
+		//Getters 
+	public int getAcctNum() {
+		return acctNum;
+	}
+		
+	public String getAcctType() {
+		return acctType;
+	}
+		
+	public double getBalance() {
+		return acctBalance;
+	}
+		
+	public Depositor getDepositor() {
+		return depositor;
+	}
+		
+	public DateInfo getDateInfo() {
+		return date;
+	}
+	
+	public Transaction getTransactions(int index){
+		return transaction.get(index);
+	}
+	
+	public boolean getStatus() {
+		return acctStatus;
+	}
+	
+	public int getTransactionSize() {
+		return transaction.size();
+	}
+	
+	public Account getAccount() {
+		Account acct = new Account(acctNum, acctType, acctStatus, acctBalance, transaction, depositor, date);
+		return acct;
+	}
+	
+	public String toString() {
+		String accStatus;
+		String str;
+		if(acctStatus == true)
+			accStatus = "Open";
+		else accStatus = "Closed";
+		if(acctType.equals("CD")) {
+		 str = String.format("%-12s %-12s %9s %8d %10s %9.2f %8s %4d/%1d/%2d", 
+				depositor.getName().getFirst(),
+				depositor.getName().getLast(),
+				depositor.getSSNumber(),
+				acctNum,
+				acctType, 
+				acctBalance, 
+				accStatus, 
+				date.getMonth(),
+				date.getDayOfMonth(),
+				date.getYear());
+		}else {
+			str = String.format("%-12s %-12s %9s %8d %10s %9.2f %8s", 
+					depositor.getName().getFirst(),
+					depositor.getName().getLast(),
+					depositor.getSSNumber(),
+					acctNum,
+					acctType, 
+					acctBalance, 
+					accStatus); 
+		}
+		return str;
+		}
+	
+	public String toStringAcctInfo() {
+		String str;
+		
+		String accStatus;
+		if(acctStatus == true)
+			accStatus = "Open";
+		else accStatus = "Closed";
+		
+		if(acctType.equals("CD")){
+			str = String.format("Account Holder: %s %s \n"
+					+ "Account Holder SSID: %s \n "
+					+ "Account Number: %d \n"
+					+ "Account Type: %s \n"
+					+ "Account Balance: %d \n"
+					+ "Account Status: %s \n"
+					+ "Maturity Date: %d/%d/%d",
+					depositor.getName().getFirst(),
+					depositor.getName().getLast(),
+					depositor.getSSNumber(),
+					acctNum,
+					acctType,
+					accStatus,
+					date.getMonth(),
+					date.getDayOfMonth(),
+					date.getYear());
+		}
+		else {
+			str = String.format("Account Holder: %s %s \n"
+					+ "Account Holder SSID: %s \n"
+					+ "Account Number: %d \n"
+					+ "Account Type: %s \n"
+					+ "Account Balance: %9.2f \n"
+					+ "Account Status: %s \n",
+					depositor.getName().getFirst(),
+					depositor.getName().getLast(),
+					depositor.getSSNumber(),
+					acctNum,
+					acctType,
+					acctBalance,
+					accStatus);
+		}
+		return str;
+	}
+	
+	
+	
+	public boolean acctNumEquals(Account acct) {
+		if(acctNum == acct.getAcctNum()) 
+			return true;
+		else return false;
+	}
+	
+}

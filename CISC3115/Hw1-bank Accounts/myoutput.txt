@@ -1,0 +1,124 @@
+
+		Database of Bank Accounts
+
+Account   Balance
+ 123456  $ 200.55
+ 567890  $1234.56
+ 987654  $   2.33
+ 222222  $5000.00
+ 333333  $ 999.99
+ 555555  $ 250.00
+ 347331  $ 365.67
+ 917685  $   0.00
+ 646496  $   0.00
+ 987659  $5256.00
+
+Transaction Requested: Balance Inquiry
+Account Number: 555555
+Current Balance: $250.00
+
+Transaction Requested: Balance Inquiry
+Error: Account number 123457 does not exist
+
+Transaction Requested: Deposit
+Account Number: 347331
+Old Balance: $365.67
+Amount to Deposit: $5.0
+New Balance: $370.67
+
+Transaction Requested: Deposit
+Account Number: 347331
+Amount to Deposit: $-1.0
+Error: $-1.00 is an invalid amount
+
+Transaction Requested: Deposit
+Error: Account number 666999 does not exist
+
+Transaction Requested: Withdrawal
+Account Number: 567890
+Old Balance: $1234.56
+Amount to Withdraw: $34.56
+New Balance: $1200.00
+
+Transaction Requested: Withdrawal
+Account Number: 987654
+Amount to Withdraw: $-3.0
+Error: $-3.00 is an invalid amount
+
+Transaction Requested: Withdrawal
+Account Number: 222222
+Amount to Withdraw: $5001.0
+Error: Insuffiecnt funds
+
+Transaction Requested: Withdrawal
+Error: Account number 111111 does not exist
+
+Transaction Requested: New Account
+New Account Created
+New Account Number: 123457
+
+Transaction Requested: New Account
+New Account Created
+New Account Number: 696969
+
+Transaction Requested: New Account
+New Account Created
+New Account Number: 321789
+
+Transaction Requested: New Account
+Error: Account number 123456 already exists
+
+Transaction Requested: Deposit
+Account Number: 123457
+Old Balance: $0.00
+Amount to Deposit: $10.5
+New Balance: $10.50
+
+Transaction Requested: Deposit
+Account Number: 696969
+Old Balance: $0.00
+Amount to Deposit: $3.5
+New Balance: $3.50
+
+Transaction Requested: Deposit
+Account Number: 321789
+Old Balance: $0.00
+Amount to Deposit: $1000.0
+New Balance: $1000.00
+
+Transaction Requested: Withdrawal
+Account Number: 321789
+Old Balance: $1000.00
+Amount to Withdraw: $500.0
+New Balance: $500.00
+
+Transaction Requested: Delete Account
+Account Deleted: 917685
+
+Transaction Requested: Delete Account
+Error: Account 222222 has a non-zero balance
+
+Transaction Requested: Delete Account
+Error: Account 777777 does not exist
+
+Error: a is an invalid selection -  try again
+
+Error: s is an invalid selection -  try again
+
+
+		Database of Bank Accounts
+
+Account   Balance
+ 123456  $ 200.55
+ 567890  $1200.00
+ 987654  $   2.33
+ 222222  $5000.00
+ 333333  $ 999.99
+ 555555  $ 250.00
+ 347331  $ 370.67
+ 646496  $   0.00
+ 987659  $5256.00
+ 123457  $  10.50
+ 696969  $   3.50
+ 321789  $ 500.00
+

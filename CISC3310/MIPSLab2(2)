@@ -1,0 +1,42 @@
+.data
+text: .asciiz "Sum: "
+i: .word 0
+additive: .word 
+multi: .word 
+sum: .word 
+.text	
+main:
+	lw $t0, i #int i = 0
+	li $t1, 3 # additive int
+	li $t2, 4 # multiplyer
+	li $t3, 0 #temp sum
+	sw $t1, additive
+	sw $t2, multi
+	
+	jal loop #call loop
+	
+	sw $v0, sum #save value of sum
+	
+	
+	la $a0, text #load text in
+	li $v0, 4 #specify print string service
+	syscall #output Text
+	lw $a0, sum #Load sum in
+	li $v0, 1 #specify print int service
+	syscall #output sum
+	
+	li $v0, 10 #system call for exit
+	syscall #exit program
+	
+loop:	
+	bge $t0, $t2, exit #end of loop
+	add $t3, $t3, $t1 #add to temp sum, $t3
+	addi $t0, $t0, 1 # add 1 to i
+	
+	j loop
+	
+exit: 
+	add $v0, $v0, $t3 #put sum in return value
+	jr $ra #return
+
+

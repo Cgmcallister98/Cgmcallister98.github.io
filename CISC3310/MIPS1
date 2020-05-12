@@ -1,0 +1,17 @@
+main:
+	li $t1, 0 ##int i = 0
+	li $t2, 0 # 0 counter 
+	li $t3, 1 #position
+	 	
+main_loop: 
+	bge $t2, 32, main_exit #end of loop
+	
+	and $t4, $t0, $t3 #bit = input & position
+	beq $t4, $0, True #if bit == 0
+	True: addi $t2, $t2, 1 # count++
+	addi $t3, $t3, 1 # move posiiton
+	add $t1, $t1, 1 # i++
+	
+	j main_loop
+	
+main_exit: jr $ra	
