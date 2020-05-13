@@ -8,25 +8,29 @@ var ctx = document.getElementById("myCanvas").getContext("2d");
 
 var color = 'black';
 var size = 25;
-var bgColor = 'black';
-var int;
+var bgColor = 'white';
 var synth = window.speechSynthesis;
 synth.lang = "en-US";
 
 
-ctx.beginPath();
-ctx.fillStyle = 'black';
-ctx.arc(400, 300, 25, 0, 2* Math.PI);
-ctx.fill();
-ctx.stroke();
+function starterArc(){
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.arc(400, 300, 25, 0, 2* Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+}
 
 var commands = {
     'color *word': function(word){
         alert('speech function');
+        color = word;
         colorChange(word);
     },
     'background *word': function(word){
         alert('bg function');
+        bgColor = word;
         backgroundChange(word);
     },
     'size *word': function(word){
@@ -47,6 +51,7 @@ annyang.addCommands(commands);
 function startButton(){
   var x = document.getElementById("speakButton");
   if (x.value === "Speak") {
+    starterArc();
     x.value = "Stop";
     annyang.start({continuous: false});
   } else {
@@ -73,16 +78,21 @@ function about(){
 };
 
 function colorChange(word){
-    alert('function called');
-            color = word;
-            clear();
-    
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.arc(400, 300, size, 0, 2* Math.PI);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
 }
 
 function backgroundChange(word){
-    alert('bg function called');
-            bgColor = word;
-            clear();
+    ctx.beginPath();
+    ctx.fillStyle = bgColor;
+    ctx.rect(0, 0, ctx.width, ctx.height);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
 }
 
 function sizeChange(size){
@@ -98,28 +108,10 @@ function sizeChange(size){
             synth.speak(msg);
     }
     else{
-        clear();
+       ctx.fillStyle = color; 
+       ctx.arc(400, 300, size, 0, 2* Math.PI);
+       ctx.fill();
+       ctx.stroke();
     }
 }
 
-function clear(){
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, ctx.width, ctx.height);
-    update();
-}
-
-function update(){
-    alert('update called');
-    
-    ctx.beginPath();
-    ctx.fillStyle = bgColor;
-    ctx.rect(0, 0, ctx.width, ctx.height);
-    ctx.fill();
-    ctx.stroke();
-    
-    ctx.beginPath();
-    ctx.fillstyle = color;
-    ctx.arc(400, 300, size, 0, 2* Math.PI); 
-    ctx.fill();
-    ctx.stroke();
-}
