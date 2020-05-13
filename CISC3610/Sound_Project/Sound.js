@@ -93,7 +93,7 @@ function backgroundChange(word){
     ctx.fill();
     ctx.closePath();
     ctx.stroke();
-}
+} 
 
 function sizeChange(size){
    
