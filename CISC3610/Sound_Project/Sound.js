@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-var ctx = document.getElementById("myCanvas").getContext("2d");
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
 var color = 'black';
 var size = 25;
@@ -15,6 +16,11 @@ synth.lang = "en-US";
 
 function starterArc(){
     ctx.beginPath();
+    ctx.rect(0, 0, c.width, c.height);
+    ctx.closePath();
+    ctx.stroke();
+    
+    ctx.beginPath();
     ctx.fillStyle = color;
     ctx.arc(400, 300, 25, 0, 2* Math.PI);
     ctx.fill();
@@ -24,17 +30,14 @@ function starterArc(){
 
 var commands = {
     'color *word': function(word){
-        alert('speech function');
         color = word;
         colorChange(word);
     },
     'background *word': function(word){
-        alert('bg function');
         bgColor = word;
         backgroundChange(word);
     },
     'size *word': function(word){
-        alert('size function');
         size = parseInt(word);
         sizeChange(size);
     },
@@ -78,8 +81,15 @@ function about(){
 };
 
 function colorChange(word){
-    ctx.beginPath();
     reset();
+    ctx.beginPath();
+    ctx.fillStyle = bgColor;
+    ctx.rect(0, 0, c.width, c.height);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+    
+    ctx.beginPath();
     ctx.fillStyle = color;
     ctx.arc(400, 300, size, 0, 2* Math.PI);
     ctx.fill();
@@ -88,12 +98,17 @@ function colorChange(word){
 }
 
 function backgroundChange(word){
-    alert('Background Change Called');
     reset();
     ctx.beginPath();
     ctx.fillStyle = bgColor;
-    alert('Fill style: ' + ctx.fillStyle);
-    ctx.rect(0, 0, ctx.width, ctx.height);
+    ctx.rect(0, 0, c.width, c.height);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.arc(400, 300, size, 0, 2* Math.PI);
     ctx.fill();
     ctx.closePath();
     ctx.stroke();
@@ -114,6 +129,13 @@ function sizeChange(size){
     else{
        reset();
        ctx.beginPath();
+       ctx.fillStyle = bgColor;
+       ctx.rect(0, 0, c.width, c.height);
+       ctx.fill();
+       ctx.closePath();
+       ctx.stroke();
+        
+       ctx.beginPath();
        ctx.fillStyle = color; 
        ctx.arc(400, 300, size, 0, 2* Math.PI);
        ctx.fill();
@@ -124,7 +146,7 @@ function sizeChange(size){
 
 function reset(){
     ctx.fillStyle = 'white';
-    ctx.rect(0, 0, ctx.width, ctx.height);
+    ctx.rect(0, 0, c.width, c.height);
     ctx.fill();
     ctx.stroke();
 }
