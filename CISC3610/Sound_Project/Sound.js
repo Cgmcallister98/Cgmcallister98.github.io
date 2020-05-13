@@ -79,6 +79,7 @@ function about(){
 
 function colorChange(word){
     ctx.beginPath();
+    reset();
     ctx.fillStyle = color;
     ctx.arc(400, 300, size, 0, 2* Math.PI);
     ctx.fill();
@@ -87,8 +88,11 @@ function colorChange(word){
 }
 
 function backgroundChange(word){
+    alert('Background Change Called');
+    reset();
     ctx.beginPath();
     ctx.fillStyle = bgColor;
+    alert('Fill style: ' + ctx.fillStyle);
     ctx.rect(0, 0, ctx.width, ctx.height);
     ctx.fill();
     ctx.closePath();
@@ -108,10 +112,20 @@ function sizeChange(size){
             synth.speak(msg);
     }
     else{
+       reset();
+       ctx.beginPath();
        ctx.fillStyle = color; 
        ctx.arc(400, 300, size, 0, 2* Math.PI);
        ctx.fill();
+       ctx.closePath();
        ctx.stroke();
     }
+}
+
+function reset(){
+    ctx.fillStyle = 'white';
+    ctx.rect(0, 0, ctx.width, ctx.height);
+    ctx.fill();
+    ctx.stroke();
 }
 
